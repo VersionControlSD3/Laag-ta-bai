@@ -1,5 +1,8 @@
 # Laag-ta-bai
 
+For local setup, see [Instruction.md](Instruction.md). For the GitHub Actions
+pipeline and Vercel deployment setup, see [docs/ci-cd.md](docs/ci-cd.md).
+
 ## React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.

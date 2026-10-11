@@ -26,3 +26,6 @@ dev-dist
 
 # Secret environment variables
 .env
+.env.*
+!.env.example
+.vercel
