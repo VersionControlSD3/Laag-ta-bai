@@ -30,6 +30,12 @@ development, use the local API URL and publishable/anon key reported by the
 Supabase CLI instead. Restart the Vite server after changing environment
 variables.
 
+This checkout uses hosted staging for `npm run dev` through the ignored
+`.env.development.local` file. It overrides the duplicate production/staging
+entries in `.env`. Keep deployment settings in Vercel's environment variables.
+The shared client is exported from `src/lib/supabase.ts`; import it with
+`import { supabase } from './lib/supabase'` from files directly in `src/`.
+
 Only values prefixed with `VITE_` are available to frontend code, which means
 they are public in the built application. Use a publishable/anon key here;
 never put a service-role key, database password, or other secret in a `VITE_`
