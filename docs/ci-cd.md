@@ -26,7 +26,9 @@ on a direct push to `main`. Required PR checks protect the merge path.
 Keep `VITE_SUPABASE_URL` and `VITE_SUPABASE_PUBLISHABLE_KEY` in Vercel's
 Production and Preview environments as appropriate. Use only a public
 publishable/anon key; Vite embeds `VITE_` values in browser assets.
-The starter UI does not use Supabase yet. CI runs without production credentials.
+The shared Supabase client is in `src/lib/supabase.ts`; the starter UI does not
+query it yet. Local development selects staging through `.env.development.local`.
+CI runs without production credentials.
 See [Instruction.md](../Instruction.md) for local setup.
 
 No `VERCEL_TOKEN`, `VERCEL_ORG_ID`, or `VERCEL_PROJECT_ID` secrets or Vercel CLI
