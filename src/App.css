@@ -1,42 +1,36 @@
-#root {
-  max-width: 1280px;
+/* Phone layout only: on wider screens the same column is centred. */
+.app-screen {
+  min-height: 100dvh;
+}
+
+.app-content {
+  max-width: 480px;
   margin: 0 auto;
-  padding: 2rem;
+}
+
+.app-tabbar {
+  position: fixed;
+  inset: auto 0 0;
+  z-index: 10;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.app-placeholder {
+  padding: var(--space-12) var(--space-6);
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.app-placeholder h1 {
+  margin: 0;
+  font-size: 36px;
+  line-height: 40px;
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  color: var(--ink);
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
+.app-placeholder p {
+  margin: var(--space-2) 0 0;
+  color: var(--ink-muted);
 }

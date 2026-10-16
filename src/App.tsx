@@ -1,36 +1,29 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import appLogo from '/favicon.svg'
 import PWABadge from './PWABadge.tsx'
+import { GradientBackground, ScreenNavbar, type TabName } from './design-system/components'
+import { ExplorePage } from './pages/ExplorePage'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [tab, setTab] = useState<TabName>('Explore')
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={appLogo} className="logo" alt="laagtabai logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <GradientBackground className="app-screen">
+      <main className="app-content">
+        {tab === 'Explore' ? (
+          <ExplorePage />
+        ) : (
+          <section className="app-placeholder">
+            <h1>{tab}</h1>
+            <p>This screen is coming soon.</p>
+          </section>
+        )}
+      </main>
+      <div className="app-tabbar">
+        <ScreenNavbar active={tab} onSelect={setTab} />
       </div>
-      <h1>laagtabai</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
       <PWABadge />
-    </>
+    </GradientBackground>
   )
 }
 

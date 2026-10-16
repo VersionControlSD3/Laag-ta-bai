@@ -1,0 +1,147 @@
+.explore {
+  padding-top: var(--space-12);
+  /* The tab bar floats over content. */
+  padding-bottom: calc(var(--size-tabbar) + 20px + var(--space-8));
+}
+
+.explore-gutter {
+  padding-inline: var(--space-6);
+}
+
+.explore-header {
+  text-align: center;
+  margin-bottom: var(--space-6);
+  padding-inline: var(--space-6);
+}
+
+.explore-title {
+  margin: 0;
+  font-size: 36px;
+  line-height: 40px;
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  color: var(--ink);
+}
+
+.explore-subtitle {
+  margin: var(--space-1) 0 0;
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--ink-muted);
+}
+
+.explore-header + .explore-gutter {
+  margin-bottom: var(--space-6);
+}
+
+/* Map card */
+.explore-map {
+  position: relative;
+  height: 224px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-3xl);
+  background: var(--sage-soft);
+  box-shadow: var(--shadow-lg);
+}
+
+.explore-map-frame {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.explore-map-expand {
+  position: absolute;
+  top: var(--space-3);
+  left: var(--space-3);
+}
+
+/* Clears the embed's own zoom control on the right edge. */
+.explore-map-locate {
+  position: absolute;
+  top: var(--space-3);
+  right: var(--space-12);
+}
+
+/* Sections */
+.explore-section {
+  margin-top: var(--space-8);
+}
+
+.explore-section-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-4);
+  margin-bottom: var(--space-4);
+}
+
+.explore-section-title {
+  margin: 0;
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.explore-section-sub {
+  margin: 0;
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--ink-muted);
+}
+
+.explore-see-all {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--size-control);
+  height: var(--size-control);
+  margin: calc(var(--space-3) * -1) calc(var(--space-3) * -1) 0 0;
+  padding: 0;
+  border: 0;
+  border-radius: var(--radius-full);
+  background: none;
+  color: var(--terracotta);
+  cursor: pointer;
+}
+
+.explore-see-all:active {
+  opacity: var(--opacity-press-row);
+}
+
+/* Horizontal rail: edge to edge, 24px leading inset, 16px gaps. */
+.explore-rail {
+  display: flex;
+  gap: var(--space-4);
+  overflow-x: auto;
+  padding: 0 var(--space-6) var(--space-4);
+  scroll-padding-inline: var(--space-6);
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+}
+
+.explore-rail::-webkit-scrollbar {
+  display: none;
+}
+
+.explore-rail > * {
+  flex: none;
+  scroll-snap-align: start;
+}
+
+.explore-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  margin-top: var(--space-4);
+}
+
+.explore-empty {
+  margin: 0;
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--ink-muted);
+}
